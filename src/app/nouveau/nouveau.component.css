@@ -1,0 +1,16 @@
+
+label {
+    display: inline-block;
+}
+
+input {
+    display: inline-block;
+    width: 300px;
+    margin-right: 80px;
+    box-sizing: border-box;
+    
+}
+
+.validation {
+    text-align: center;
+}

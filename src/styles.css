@@ -1,0 +1,109 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+    margin: 5px;
+    padding: 0px;
+    /* box-sizing: border-box; */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    /* background: rgb(240, 237, 237); */
+}
+
+header {
+    display:flex;
+    background: ;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    /* height: 10vh; */
+}
+
+.logo-container, .nav-links, .cart
+{
+    display: flex;
+}
+/* factorisation: déclarer style commun à 3 trois classes */
+
+.logo-container {
+    /* background: rgb(186, 134, 238); */
+    flex: 1;
+    /* width: flex 1  erreur de syntaxe */
+}
+.logo {
+    font-weight: 400;
+    margin: 5px
+}
+
+nav {
+    /* background: rgba(220, 228, 187, 0.973); */
+    flex: 2;
+    /* justify-content: space-around; */
+
+}
+
+.nav-links {
+    justify-content: space-around;
+}
+
+li {
+    list-style: none;
+    
+}
+
+a {
+    text-decoration: none;
+    
+}
+
+.cart {
+    /* background:  rgb(226, 49, 132); */
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.cart img {
+    height: auto;
+    width: auto;
+    object-fit: cover;
+}
+
+hr {
+    /* code extrait de swarm-it puis adapté */
+    border: none;
+    height: 2px;
+    /* Set the hr color */
+    color: rgb(0,0,0); /* old IE */
+    background-color: rgb(5, 13, 122); /* Modern Browsers */
+    /* background-color: rgb(190, 194, 245) */
+}
+
+.presentation{
+    display: flex;
+    width: 90%;
+    min-height: 80vh;
+    margin: auto ;
+    align-items: center;
+}
+
+.introduction {
+    flex:1;
+    background: rgb(204, 204, 241)
+}
+
+.cover {
+    flex:1;
+}
+
+.cover img{
+    height: 60vh;
+}
+
+.intro-text h4{
+    font-size: 22px;
+}
+
+#menu li a{
+    display: inline;
+}

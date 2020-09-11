@@ -1,0 +1,30 @@
+<!-- <p>
+    PLACER ICI LA LISTE DE TOUS LES ARTICLES
+</p>
+<br>
+CATEGORIE: {{categorie}}
+<br>
+TITRE: {{titre}}
+<br>
+<br> -->
+<router-outlet></router-outlet>
+
+<ul>
+    <li *ngFor="let a of mesArticles">
+        <!-- <a routerLink="['detailsArticle',dateArt,categorieArt,titreArt,contenuArt]" class="nav-link"> -->
+        <a [routerLink]="['detailsArticle', a.id]" class="nav-link">
+        
+        <!-- <a routerLink='detailsArticle/:a.id' class="nav-link"> -->
+
+            <b>DATE: </b> {{a.date|date:'dd/MM/yy, h:mm a'}} <!-- autres formats |date:'medium' |date:'short' |date:'d MMM y' -->
+            <br>
+            <b>CATEGORIE: </b>  {{a.categorie}}
+            <br>
+            <b>TITRE: </b> {{a.titre}}
+            <br>
+            <b>CONTENU: </b> {{a.contenu}}
+        </a>
+        <hr>
+    </li>
+</ul>
+

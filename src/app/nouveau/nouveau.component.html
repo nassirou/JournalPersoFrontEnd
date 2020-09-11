@@ -1,0 +1,33 @@
+<!-- <p style="text-align:center; font-weight:bold">nouveau works!</p> -->
+
+<div>
+    <form style="width:40%;margin:auto;background:silver" #saisie=ngForm action="" (ngSubmit)="valider(saisie)">
+        <!-- <fieldset></fieldset> -->
+            <input type="hidden" name="id" placeholder=""  #id=ngModel ngModel> <!--[(ngModel)]=article.id -->
+            <input type="hidden" name="date" placeholder=""     #date=ngModel ngModel> <!-- [(ngModel)]=article.date -->
+            <label for="categorie">CATEGORIE </label>       
+            <input type="text" name="categorie" placeholder="Finance" #categorie=ngModel ngModel> <!--[(ngModel)]=article.categorie -->
+            <br>
+            <label for="titre">TITRE </label>
+            <input type="text" name="titre" placeholder="Bilan de séance"  #titre=ngModel ngModel> <!-- [(ngModel)]=article.titre -->
+            <br>
+            <br>
+            
+            <label for="contenu">CONTENU </label> 
+            <textarea style="vertical-align: top" name="contenu" id="" cols="30" rows="10"  #contenu=ngModel ngModel></textarea> <!-- [(ngModel)]=article.contenu -->
+            <br>
+            <br>
+            <div></div>
+            <button type="submit">ajouter</button> <!-- *ngIf="!article.id" -->
+            <!-- <button type="submit">modifier</button>  --> <!-- *ngIf="article.id" -->
+
+            <!-- il semble inutile de distinguer les 2 cas AJOUTER et MODIFIER mais 
+            de regrouper tout sous le terme ENREGISTRER -->
+            <button type="reset">effacer</button>
+    </form>
+</div>
+<!-- #date=ngModel -->
+<!-- #categorie= -->
+<!-- #titre= -->
+<!-- vertical-align: top -->
+<!-- "display:block" pour afficher les éléments empilés les uns sur les autres -->
