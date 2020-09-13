@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, RouteConfigLoadEnd } from '@angular/router';
+import { ActivatedRoute/*, RouteConfigLoadEnd*/} from '@angular/router';
 import { ArticleService } from '../services/article.service';
 import { Article } from '../interfaces/article';
 
@@ -77,8 +77,9 @@ export class ArticlesComponent implements OnInit {
   }
 
   afficherArticles() {
-    this.mesArticles = this.articleService.listerArticles()
+    this.mesArticles = this.articleService.listerArticles()  
     // console.dir(this.mesArticles);
+    // this.articleService.listerArticles().subscribe(data=>{this.mesArticles=data})
   }
 
 }
