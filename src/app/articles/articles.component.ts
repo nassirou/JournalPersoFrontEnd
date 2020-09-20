@@ -66,14 +66,14 @@ export class ArticlesComponent implements OnInit {
   constructor(private route: ActivatedRoute, private articleService: ArticleService) { }
 
   ngOnInit(): void {
+    /*
     this.route.paramMap.subscribe(res => {
       this.categorie = res.get('categorie');
       this.titre = res.get('titre')
       // console.log("L'article choisi est de la catégorie " + this.categorie + " et a pour titre " + this.titre)
-    })
-
+    }) 
+    */
     this.afficherArticles()
-
   }
 
   afficherArticles() {

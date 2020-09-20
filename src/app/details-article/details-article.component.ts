@@ -30,20 +30,20 @@ export class DetailsArticleComponent implements OnInit {
   }
 
   supprimerArticle() {
-    /* ANCIEN VERSION AVANT DE DEPLACER LE CODE DE LA METHODE VERS LE SERVICE...
+    /* ANCIENNE VERSION AVANT DE DEPLACER LE CODE DE LA METHODE VERS LE SERVICE...
     // this.listeArticles=this.artService.articles
 
     var index = this.artService.listerArticles().indexOf(this.article);
     if (index > -1) {
       this.artService.listerArticles().splice(index, 1);
     } */
+    if (confirm("SOUHAITEZ-VOUS VRAIMENT SUPPRIMER CET ARTICLE ?"))
+    { this.artService.eliminerArticle(this.article);
 
-    this.artService.eliminerArticle(this.article);
-
-    console.dir(this.artService.listerArticles())
-    this.router.navigate(['articles']);
-
-  }
+      console.dir(this.artService.listerArticles())
+      alert("L'ARTICLE A ETE SUPPRIME AVEC SUCCES")
+      this.router.navigate(['articles']);}
+    }
   modifierArticle() {
     this.router.navigate(['modifier', this.id])  // une forme de redirection
     // adapter du code pour tenir compte de l'identifiant de l'article à transmettre

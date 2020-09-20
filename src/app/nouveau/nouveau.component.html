@@ -6,7 +6,11 @@
             <input type="hidden" name="id" placeholder=""  #id=ngModel ngModel> <!--[(ngModel)]=article.id -->
             <input type="hidden" name="date" placeholder=""     #date=ngModel ngModel> <!-- [(ngModel)]=article.date -->
             <label for="categorie">CATEGORIE </label>       
-            <input type="text" name="categorie" placeholder="Finance" #categorie=ngModel ngModel> <!--[(ngModel)]=article.categorie -->
+            <!-- <input type="text" name="categorie" placeholder="Finance" #categorie=ngModel ngModel> -->
+            <!--[(ngModel)]=article.categorie -->
+            <select name="categorie" ngModel> <!-- [(ngModel)]="categorieChoisie" -->
+                <option *ngFor="let cat of listeCategorie" [ngValue]="cat">{{cat}}</option>
+            </select>
             <br>
             <label for="titre">TITRE </label>
             <input type="text" name="titre" placeholder="Bilan de séance"  #titre=ngModel ngModel> <!-- [(ngModel)]=article.titre -->

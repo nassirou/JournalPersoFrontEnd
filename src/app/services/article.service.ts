@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Article } from '../interfaces/article';
-// import { HttpClient } from '@angular/common/http' //'selenium-webdriver/http';
+import { HttpClient } from '@angular/common/http' //'selenium-webdriver/http';
 // import { url } from 'inspector';
 
 @Injectable({
@@ -33,9 +33,9 @@ export class ArticleService {
   }
   ];
 
-  // npm url:string = "http://localhost:4200/...";
+  // url:string = "http://localhost:4200"; //
 
-  constructor(/*private http:HttpClient*/) { }
+  constructor(/*private http:HttpClient*/) { } //
 
   ajouterArticle(a: Article) {
     a.id = this.articles.length + 1;
@@ -53,6 +53,7 @@ export class ArticleService {
 
   listerArticles() {
     return this.articles;
+    // return this.http.get<Article[]>(this.url+'/articles');
   }
 
   trouverArticle(id: any) {

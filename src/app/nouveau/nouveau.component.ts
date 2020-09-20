@@ -20,6 +20,8 @@ export class NouveauComponent implements OnInit {
   // idArticle:any; // attribut à supprimer car devenu inutile
   // ajouter du code pour récuperer l'identifiant transmis par la route paramétrée venant de détails-article
   // dateArticle:Date; // attribut à supprimer car devenu inutile
+  listeCategorie:String[]=['POLITIQUE','ECONOMIE','SOCIETE','CULTURE','SPORT',''];
+  categorieChoisie:String;
 
   constructor(private artService: ArticleService, private route: ActivatedRoute) { }
 
@@ -34,6 +36,7 @@ export class NouveauComponent implements OnInit {
   }
 
   valider(form: NgForm){
+    if (confirm("SOUHAITEZ-VOUS ENREGISTRER LE NOUVEL ARTICLE ?")){    
     this.artService.ajouterArticle(form.value);
       /*{ DETAILS INUTILES D'AILLEURS SOURCE D'ERREURS
       categorie : form.categorie.value,
@@ -42,6 +45,8 @@ export class NouveauComponent implements OnInit {
       date: new Date()
       }*/
     form.resetForm();
+    alert("L'ARTICLE AJOUTE AVEC SUCCES")}
+
   }
 
 }
