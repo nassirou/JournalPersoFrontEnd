@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute/*, RouteConfigLoadEnd*/} from '@angular/router';
+import { ActivatedRoute/*, RouteConfigLoadEnd*/ } from '@angular/router';
 import { ArticleService } from '../services/article.service';
 import { Article } from '../interfaces/article';
+import { _ArticleService } from '../-article.service'; 
+// débrancher-déconnecter ArticleService pour connecter _ArticleService
 
 @Component({
   selector: 'app-articles',
@@ -61,9 +63,10 @@ export class ArticlesComponent implements OnInit {
   titre: any
   // route: any; si on n'a pas précisé "private" du constructeur, on est obligé d'ajouter cette ligne
 
-  mesArticles: Array<Article>;
+  // mesArticles: Array<Article>;
+  mesArticles: any;
 
-  constructor(private route: ActivatedRoute, private articleService: ArticleService) { }
+  constructor(private route: ActivatedRoute, private articleService: _ArticleService) { }
 
   ngOnInit(): void {
     /*
@@ -77,9 +80,15 @@ export class ArticlesComponent implements OnInit {
   }
 
   afficherArticles() {
-    this.mesArticles = this.articleService.listerArticles()  
+    // this.mesArticles = this.articleService.listerArticles() VERSION INITIALE SANS BACK-END
     // console.dir(this.mesArticles);
-    // this.articleService.listerArticles().subscribe(data=>{this.mesArticles=data})
+    this.articleService.listerArticles().subscribe(
+      data => {
+        this.mesArticles = data;
+        console.log(data)
+      },
+      err => console.log(err)
+    )
   }
 
 }

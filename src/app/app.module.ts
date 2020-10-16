@@ -13,6 +13,8 @@ import { NouveauComponent } from './nouveau/nouveau.component';
 import { FormsModule } from '@angular/forms';
 import { DetailsArticleComponent } from './details-article/details-article.component';
 import { ModifierArticleComponent } from './modifier-article/modifier-article.component';
+//-----
+import {HttpClientModule}from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import { ModifierArticleComponent } from './modifier-article/modifier-article.co
     BrowserModule,
     AppRoutingModule,
     // ajouté manuellement car erreur sur formulaire de NouveauComponent
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [ArticleService],
   bootstrap: [AppComponent]

@@ -12,21 +12,21 @@ export class ArticleService {
   // articles: Array<Article> = new Array<Article>(); // revoir syntaxe de déclaration des tableaux
   articles: Article[] = [{
     "id": 1,
-    "categorie": "Sport",
+    "categorie": "SPORT",
     "titre": "Finale PSG-Bayern",
     "contenu": "Déception...",
     "date": new Date()
   },
   {
     "id": 2,
-    "categorie": "Politique",
+    "categorie": "POLITIQUE",
     "titre": "Négociation junte-Cedeao",
     "contenu": "Transition de 3 ans proposée..",
     "date": new Date()
   },
   {
     "id": 3,
-    "categorie": "Entreprises",
+    "categorie": "ECONOMIE",
     "titre": "résultats semestriel de Sicable",
     "contenu": "Performance explosive...",
     "date": new Date()
