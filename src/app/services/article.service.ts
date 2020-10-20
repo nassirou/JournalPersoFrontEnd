@@ -10,11 +10,12 @@ export class ArticleService {
 
 
   // articles: Array<Article> = new Array<Article>(); // revoir syntaxe de déclaration des tableaux
-  articles: Article[] = [{
+  articles: Article[] = [/* CONTENU DESACTIVE APRES REMPLACEMENT DU CHAMP DATE PAR CREATED_AT
+     {
     "id": 1,
     "categorie": "SPORT",
     "titre": "Finale PSG-Bayern",
-    "contenu": "Déception...",
+    "contenu": "Déception..." ,
     "date": new Date()
   },
   {
@@ -30,8 +31,7 @@ export class ArticleService {
     "titre": "résultats semestriel de Sicable",
     "contenu": "Performance explosive...",
     "date": new Date()
-  }
-  ];
+  } */];
 
   // url:string = "http://localhost:4200"; //
 
@@ -42,7 +42,8 @@ export class ArticleService {
     /* vérifier si problème de ID en doublon en RAM et disque en cas de suppression d'éléments du tableau 
     */
 
-    a.date=new Date();
+    /* LIGNE DESACTIVEE car champ date remplacé par champ createdAt 
+    a.date=new Date(); */
     this.articles.push(a);
     
     /*
@@ -72,7 +73,9 @@ export class ArticleService {
 
   modifierArticle(id:any, a: Article) {
     var i=id-1;
-    this.articles[i].date=a.date;
+    /* LIGNE DESACTIVEE car champ date remplacé par champ createdAt 
+    this.articles[i].date=a.date; */
+    
     this.articles[i].categorie=a.categorie; 
     this.articles[i].titre=a.titre;    
     this.articles[i].contenu=a.contenu;

@@ -9,5 +9,6 @@ export interface Article {
     categorie?: string;
     titre?: string;
     contenu?: string;
-    date?: Date;
+    // date?: Date;
+    createdAt: Date
 }

@@ -6,7 +6,8 @@
 </p>
 -->
 
-<b>DATE: </b> {{article.dateCreation|date:'dd/MM/yy, h:mm a'}}     <!-- autres formats |date:'medium' |date:'short' |date:'d MMM y' -->
+<b>DATE: </b> <!-- {{article.dateCreation|date:'dd/MM/yy, h:mm a'}} -->    <!-- autres formats |date:'medium' |date:'short' |date:'d MMM y' -->
+{{article.createdAt|date:'dd/MM/yy, h:mm a'}}
 <br>
 <b>CATEGORIE: </b> {{article.categorie}}
 <br>
